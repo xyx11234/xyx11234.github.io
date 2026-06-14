@@ -245,12 +245,16 @@
             <!-- 第一行 -->
         <div class="demo-grid">
             <div class="demo-item">
-                <audio controls src="audio/1_8555.wav"></audio>
+                <audio controls preload="none">
+                    <source src="audio/1_8555.wav">
+                </audio>
                 <img src="specs/utt1_clean.png" class="spec-img" onclick="openModal(this.src)" alt="Clear">
             </div>
             
             <div class="demo-item">
-                <audio controls src="audio/3_8555.wav"></audio>
+                <audio controls src="audio/3_8555.wav">
+                    
+                </audio>
                 <img src="specs/utt1_noisy.png" class="spec-img" onclick="openModal(this.src)" alt="CTSNet">
             </div>
             <div class="demo-item">
@@ -262,7 +266,9 @@
 
             <!-- 第二行 -->
             <div class="demo-item">
-                <audio controls src="audio/7_8555.wav"></audio>
+                <audio controls preload="none">
+                    <source src="audio/7_8555.wav">
+                </audio>
                 < img src="specs/utt1_EaB-ParCNet.png" class="spec-img" onclick="openModal(this.src)" alt="FasNet+TAC">
             </div>
             <div class="demo-item">
