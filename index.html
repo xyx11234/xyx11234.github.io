@@ -230,84 +230,271 @@
         <div style="font-weight: bold; margin-bottom: 10px;">实验结果B</div>
         <img src="table2.png" alt="表格2" style="max-width: 100%; border: 1px solid #ccc;">
     </div>
+    <!-- Utterance 1 -->
+    <div class="utterance-bar">
+            Utterance 1 (Sample1 LibriSpeech-WHAM!)
+    </div>
     
-        <div class="demo-grid" id="grid-1">
+    <div class="demo-grid" id="grid-1">
             <!-- 第一行 -->
             <div class="demo-item">
                 <audio controls preload="none">
-                    <source src="audio/utt1_noisy.wav" type="audio/wav">
+                    <source src="audio/1_8555.wav" type="audio/wav">
                 </audio>
-                < img src="specs/utt1_noisy.png" class="spec-img" onclick="openModal(this.src)" alt="Noisy">
+                < img src="specs/utt1_clean.png" class="spec-img" onclick="openModal(this.src)" alt="Noisy">
             </div>
             <div class="demo-item">
                 <audio controls preload="none">
-                    <source src="audio/utt1_ctsnet.wav" type="audio/wav">
+                    <source src="audio/3_8555.wav" type="audio/wav">
                 </audio>
-                < img src="specs/utt1_ctsnet.png" class="spec-img" onclick="openModal(this.src)" alt="CTSNet">
+                < img src="specs/utt1_noisy.png" class="spec-img" onclick="openModal(this.src)" alt="CTSNet">
             </div>
             <div class="demo-item">
                 <audio controls preload="none">
-                    <source src="audio/utt1_gagnet.wav" type="audio/wav">
+                    <source src="audio/5_8555.wav" type="audio/wav">
                 </audio>
-                < img src="specs/utt1_gagnet.png" class="spec-img" onclick="openModal(this.src)" alt="GaGNet">
+                < img src="specs/utt1_EaBNet.png" class="spec-img" onclick="openModal(this.src)" alt="GaGNet">
             </div>
 
             <!-- 第二行 -->
             <div class="demo-item">
                 <audio controls preload="none">
-                    <source src="audio/utt1_fasnet.wav" type="audio/wav">
+                    <source src="audio/7_8555.wav" type="audio/wav">
                 </audio>
-                < img src="specs/utt1_fasnet.png" class="spec-img" onclick="openModal(this.src)" alt="FasNet+TAC">
+                < img src="specs/utt1_EaB-ParCNet.png" class="spec-img" onclick="openModal(this.src)" alt="FasNet+TAC">
             </div>
             <div class="demo-item">
                 <audio controls preload="none">
-                    <source src="audio/utt1_mcconvtasnet.wav" type="audio/wav">
+                    <source src="audio/conv_8555.wav" type="audio/wav">
                 </audio>
-                < img src="specs/utt1_mcconvtasnet.png" class="spec-img" onclick="openModal(this.src)" alt="MC-ConvTasNet">
+                < img src="specs/convtass8555.png" class="spec-img" onclick="openModal(this.src)" alt="MC-ConvTasNet">
             </div>
             <div class="demo-item">
                 <audio controls preload="none">
-                    <source src="audio/utt1_mimounet.wav" type="audio/wav">
+                    <source src="audio/fasnet_8555.wav" type="audio/wav">
                 </audio>
-                < img src="specs/utt1_mimounet.png" class="spec-img" onclick="openModal(this.src)" alt="MIMO-UNet">
+                < img src="specs/fasnet8555.png" class="spec-img" onclick="openModal(this.src)" alt="MIMO-UNet">
             </div>
 
             <!-- 第三行 -->
             <div class="demo-item">
                 <audio controls preload="none">
-                    <source src="audio/utt1_mbmvdr.wav" type="audio/wav">
+                    <source src="audio/mimo_8555.wav" type="audio/wav">
                 </audio>
-                < img src="specs/utt1_mbmvdr.png" class="spec-img" onclick="openModal(this.src)" alt="MB-MVDR">
+                < img src="specs/mimo8555.png" class="spec-img" onclick="openModal(this.src)" alt="MB-MVDR">
             </div>
             <div class="demo-item">
                 <audio controls preload="none">
-                    <source src="audio/utt1_eabnet.wav" type="audio/wav">
+                    <source src="audio/mvdr_8555.wav" type="audio/wav">
                 </audio>
-                < img src="specs/utt1_eabnet.png" class="spec-img" onclick="openModal(this.src)" alt="EaBNet">
+                < img src="specs/mvdr8555.png" class="spec-img" onclick="openModal(this.src)" alt="EaBNet">
             </div>
             <div class="demo-item">
                 <audio controls preload="none">
-                    <source src="audio/utt1_eabnet_post.wav" type="audio/wav">
+                    <source src="audio/spatial_8555.wav" type="audio/wav">
                 </audio>
-                < img src="specs/utt1_eabnet_post.png" class="spec-img" onclick="openModal(this.src)" alt="EaBNet+PostNet">
+                < img src="specs/spatialnet8555.png" class="spec-img" onclick="openModal(this.src)" alt="EaBNet+PostNet">
             </div>
         </div>
 
-        <!-- 更多 Utterance 可复制上面的结构 -->
+        <-- Utterance 2 -->
         <div class="utterance-bar" style="margin-top: 20px;">
-            Utterance 2 (SNR=0dB, target-doa=30°, inter-doa=60°)
+            Utterance 2 (Sample2 LibriSpeech-WHAM!8223)
         </div>
-        <div class="demo-grid" id="grid-2">
-            <!-- 同样的9个方法，改文件名即可 -->
+        <div class="demo-grid" id="grid-1">
+            <!-- 第一行 -->
             <div class="demo-item">
                 <audio controls preload="none">
-                    <source src="audio/utt2_noisy.wav" type="audio/wav">
+                    <source src="audio/2_8224.wav" type="audio/wav">
                 </audio>
-                < img src="specs/utt2_noisy.png" class="spec-img" onclick="openModal(this.src)" alt="Noisy">
+                < img src="specs/utt2_clean.png" class="spec-img" onclick="openModal(this.src)" alt="Noisy">
             </div>
-            <!-- ... 其他8个 -->
+            <div class="demo-item">
+                <audio controls preload="none">
+                    <source src="audio/4_8224.wav" type="audio/wav">
+                </audio>
+                < img src="specs/utt2_noisy.png" class="spec-img" onclick="openModal(this.src)" alt="CTSNet">
+            </div>
+            <div class="demo-item">
+                <audio controls preload="none">
+                    <source src="audio/6_8224.wav" type="audio/wav">
+                </audio>
+                < img src="specs/utt2_EaBNet.png" class="spec-img" onclick="openModal(this.src)" alt="GaGNet">
+            </div>
+
+            <!-- 第二行 -->
+            <div class="demo-item">
+                <audio controls preload="none">
+                    <source src="audio/8_8224.wav" type="audio/wav">
+                </audio>
+                < img src="specs/utt2_EaB-ParCNet.png" class="spec-img" onclick="openModal(this.src)" alt="FasNet+TAC">
+            </div>
+            <div class="demo-item">
+                <audio controls preload="none">
+                    <source src="audio/conv2_8224.wav" type="audio/wav">
+                </audio>
+                < img src="specs/conv2_8224.png" class="spec-img" onclick="openModal(this.src)" alt="MC-ConvTasNet">
+            </div>
+            <div class="demo-item">
+                <audio controls preload="none">
+                    <source src="audio/fasnet_8224.wav" type="audio/wav">
+                </audio>
+                < img src="specs/fasnet_8224.png" class="spec-img" onclick="openModal(this.src)" alt="MIMO-UNet">
+            </div>
+
+            <!-- 第三行 -->
+            <div class="demo-item">
+                <audio controls preload="none">
+                    <source src="audio/mimo_8224.wav" type="audio/wav">
+                </audio>
+                < img src="specs/mimo_8224.png" class="spec-img" onclick="openModal(this.src)" alt="MB-MVDR">
+            </div>
+            <div class="demo-item">
+                <audio controls preload="none">
+                    <source src="audio/mvdr_8224.wav" type="audio/wav">
+                </audio>
+                < img src="specs/mvdr_8224.png" class="spec-img" onclick="openModal(this.src)" alt="EaBNet">
+            </div>
+            <div class="demo-item">
+                <audio controls preload="none">
+                    <source src="audio/spatial_8224.wav" type="audio/wav">
+                </audio>
+                < img src="specs/spatial_8224.png" class="spec-img" onclick="openModal(this.src)" alt="EaBNet+PostNet">
+            </div>
         </div>
-    </div>
+
+            <-- Utterance 3 -->
+            <div class="utterance-bar" style="margin-top: 20px;">
+            Utterance 3 (Sample1 VCTK-Noise，p232)
+        </div>
+        <div class="demo-grid" id="grid-1">
+            <!-- 第一行 -->
+            <div class="demo-item">
+                <audio controls preload="none">
+                    <source src="audio/9_p232.wav" type="audio/wav">
+                </audio>
+                < img src="specs/utt3_clean.png" class="spec-img" onclick="openModal(this.src)" alt="Noisy">
+            </div>
+            <div class="demo-item">
+                <audio controls preload="none">
+                    <source src="audio/11_p232.wav" type="audio/wav">
+                </audio>
+                < img src="specs/utt3_noisy.png" class="spec-img" onclick="openModal(this.src)" alt="CTSNet">
+            </div>
+            <div class="demo-item">
+                <audio controls preload="none">
+                    <source src="audio/13p232.wav" type="audio/wav">
+                </audio>
+                < img src="specs/utt3_EaBNet.png" class="spec-img" onclick="openModal(this.src)" alt="GaGNet">
+            </div>
+
+            <!-- 第二行 -->
+            <div class="demo-item">
+                <audio controls preload="none">
+                    <source src="audio/15_p232.wav" type="audio/wav">
+                </audio>
+                < img src="specs/utt3_EaB-ParCNet.png" class="spec-img" onclick="openModal(this.src)" alt="FasNet+TAC">
+            </div>
+            <div class="demo-item">
+                <audio controls preload="none">
+                    <source src="audio/convtas2_m109_p232.wav" type="audio/wav">
+                </audio>
+                < img src="specs/convtas2_m109_p232.png" class="spec-img" onclick="openModal(this.src)" alt="MC-ConvTasNet">
+            </div>
+            <div class="demo-item">
+                <audio controls preload="none">
+                    <source src="audio/fasnet2_m109_p232.wav" type="audio/wav">
+                </audio>
+                < img src="specs/fasnet2_m109_p232.png" class="spec-img" onclick="openModal(this.src)" alt="MIMO-UNet">
+            </div>
+
+            <!-- 第三行 -->
+            <div class="demo-item">
+                <audio controls preload="none">
+                    <source src="audio/mimo2_m109_p232.wav" type="audio/wav">
+                </audio>
+                < img src="specs/mimo2_m109_p232.png" class="spec-img" onclick="openModal(this.src)" alt="MB-MVDR">
+            </div>
+            <div class="demo-item">
+                <audio controls preload="none">
+                    <source src="audio/mvdr2_p232.wav" type="audio/wav">
+                </audio>
+                < img src="specs/mvdr2_p232.png" class="spec-img" onclick="openModal(this.src)" alt="EaBNet">
+            </div>
+            <div class="demo-item">
+                <audio controls preload="none">
+                    <source src="audio/spatial_p232.wav" type="audio/wav">
+                </audio>
+                < img src="specs/spatial_p232.png" class="spec-img" onclick="openModal(this.src)" alt="EaBNet+PostNet">
+            </div>
+        </div>
+
+                
+            <-- Utterance 4 -->
+            <div class="utterance-bar" style="margin-top: 20px;">
+            Utterance 4 (Sample2 VCTK-Noisep5)
+        </div>
+        <div class="demo-grid" id="grid-1">
+            <!-- 第一行 -->
+            <div class="demo-item">
+                <audio controls preload="none">
+                    <source src="audio/10p257.wav" type="audio/wav">
+                </audio>
+                < img src="specs/utt4_clean.png" class="spec-img" onclick="openModal(this.src)" alt="Noisy">
+            </div>
+            <div class="demo-item">
+                <audio controls preload="none">
+                    <source src="audio/12_p257.wav" type="audio/wav">
+                </audio>
+                < img src="specs/utt4_noisy.png" class="spec-img" onclick="openModal(this.src)" alt="CTSNet">
+            </div>
+            <div class="demo-item">
+                <audio controls preload="none">
+                    <source src="audio/14_p257.wav" type="audio/wav">
+                </audio>
+                < img src="specs/utt4_EaBNet.png" class="spec-img" onclick="openModal(this.src)" alt="GaGNet">
+            </div>
+
+            <!-- 第二行 -->
+            <div class="demo-item">
+                <audio controls preload="none">
+                    <source src="audio/16_p257.wav" type="audio/wav">
+                </audio>
+                < img src="specs/utt4_EaB-ParCNet.png" class="spec-img" onclick="openModal(this.src)" alt="FasNet+TAC">
+            </div>
+            <div class="demo-item">
+                <audio controls preload="none">
+                    <source src="audio/convtas2_m109_p257.wav" type="audio/wav">
+                </audio>
+                < img src="specs/convtas2_m109_p257.png" class="spec-img" onclick="openModal(this.src)" alt="MC-ConvTasNet">
+            </div>
+            <div class="demo-item">
+                <audio controls preload="none">
+                    <source src="audio/fasnet2_m109_p257.wav" type="audio/wav">
+                </audio>
+                < img src="specs/fasnet2_m109_p257.png" class="spec-img" onclick="openModal(this.src)" alt="MIMO-UNet">
+            </div>
+
+            <!-- 第三行 -->
+            <div class="demo-item">
+                <audio controls preload="none">
+                    <source src="audio/mimo2_m109_p257.wav" type="audio/wav">
+                </audio>
+                < img src="specs/mimo2_m109_p257.png" class="spec-img" onclick="openModal(this.src)" alt="MB-MVDR">
+            </div>
+            <div class="demo-item">
+                <audio controls preload="none">
+                    <source src="audio/mvdr2_p257.wav" type="audio/wav">
+                </audio>
+                < img src="specs/mvdr2_p257.png" class="spec-img" onclick="openModal(this.src)" alt="EaBNet">
+            </div>
+            <div class="demo-item">
+                <audio controls preload="none">
+                    <source src="audio/spatial_p257.wav" type="audio/wav">
+                </audio>
+                < img src="specs/spatial_p257.png" class="spec-img" onclick="openModal(this.src)" alt="EaBNet+PostNet">
+            </div>
+        </div>
 
     <!-- 模态框 -->
     <div class="modal" id="modal" onclick="closeModalOnBg(event)">
