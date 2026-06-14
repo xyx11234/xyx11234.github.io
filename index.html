@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Paper Title - Audio Demo</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Times New Roman', Times, serif;
+            background: #fff;
+            color: #000;
+            line-height: 1.6;
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 20px 40px;
+        }
+
+        /* 标题区 */
+        .paper-title {
+            text-align: center;
+            font-size: 22px;
+            font-weight: bold;
+            text-transform: uppercase;
+            margin: 20px 0 10px;
+            letter-spacing: 0.5px;
+        }
+
+        .authors {
+            text-align: center;
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+
+        /* 摘要 */
+        .abstract {
+            text-align: justify;
+            font-size: 14px;
+            margin: 20px 0;
+            line-height: 1.5;
+        }
+
+        .abstract-label {
+            font-weight: bold;
+            font-style: italic;
+        }
+
+        /* 架构图区 */
+        .architecture-section {
+            margin: 30px 0;
+        }
+
+        .section-title {
+            font-weight: bold;
+            font-size: 16px;
+            margin-bottom: 15px;
+        }
+
+        .architecture-img {
+            width: 100%;
+            max-width: 900px;
+            display: block;
+            margin: 0 auto;
+        }
+
+        /* Samples 区域 */
+        .samples-section {
+            margin: 40px 0;
+        }
+
+        /* 方法标签表格 */
+        .method-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 0;
+            font-size: 14px;
+        }
+
+        .method-table td {
+            width: 33.33%;
+            padding: 6px 10px;
+            border-bottom: 1px solid #999;
+        }
+
+        /* 语料信息条 */
+        .utterance-bar {
+            background: #e6e6e6;
+            padding: 8px 12px;
+            font-size: 14px;
+            font-weight: normal;
+            margin-top: 10px;
+            border: 1px solid #ccc;
+        }
+
+        /* 音频+语谱图网格 */
+        .demo-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 15px;
+            padding: 15px 0;
+        }
+
+        .demo-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        audio {
+            width: 100%;
+            height: 30px;
+            margin-bottom: 8px;
+        }
+
+        /* 自定义音频播放器样式 */
+        audio::-webkit-media-controls-panel {
+            background: #f5f5f5;
+        }
+
+        .spec-img {
+            width: 100%;
+            height: 140px;
+            object-fit: cover;
+            cursor: pointer;
+            transition: transform 0.2s;
+        }
+
+        .spec-img:hover {
+            transform: scale(1.05);
+        }
+
+        /* 模态框 */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.9);
+            justify-content: center;
+            align-items: center;
+        }
+
+        .modal.active {
+            display: flex;
+        }
+
+        .modal img {
+            max-width: 90%;
+            max-height: 90%;
+        }
+
+        .modal-close {
+            position: absolute;
+            top: 20px;
+            right: 40px;
+            color: white;
+            font-size: 35px;
+            cursor: pointer;
+        }
+
+        /* 分隔线 */
+        hr {
+            border: none;
+            border-top: 1px solid #999;
+            margin: 10px 0;
+        }
+
+        /* 响应式 */
+        @media (max-width: 768px) {
+            .demo-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .method-table td {
+                width: 50%;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .demo-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- 论文标题 -->
+    <h1 class="paper-title">
+        Embedding and Beamforming: All-Neural Causal Beamformer for Multichannel Speech Enhancement
+    </h1>
+
+    <!-- 作者 -->
+    <div class="authors">
+        Andong Li, Wenzhe Liu, Chengshi Zheng, Xiaodong Li
+    </div>
+
+    <!-- 摘要 -->
+    <div class="abstract">
+        <span class="abstract-label">Abstract:</span> 
+        Standing upon the intersection of traditional beamformers and deep neural networks, 
+        we propose a causal neural beamformer paradigm called Embedding and Beamforming, 
+        and two core modules are designed accordingly, namely EM and BM. For EM, instead of 
+        estimating spatial covariance matrix explicitly, a 3-D embedding tensor is learned 
+        with the network, where both spatial-spectral-temporal discriminative information 
+        can be represented. For BM, a network is directly leveraged to derive the beamforming 
+        weights so as to implement filter-and-sum operation. To further improve the speech quality, 
+        a post-processing module is introduced to further suppress the residual noise. Based on 
+        the DNS Challenge dataset, we conduct the experiments for multichannel speech enhancement 
+        and the results show that the proposed system outperforms previous advanced baselines 
+        by a large margin in multiple evaluation metrics.
+    </div>
+
+    <!-- 架构图 -->
+    <div class="architecture-section">
+        <div class="section-title">EaBNet Architecture:</div>
+        < img src="architecture.png" alt="EaBNet Architecture" class="architecture-img">
+    </div>
+
+    <!-- Samples 区域 -->
+    <div class="samples-section">
+        <div class="section-title">Samples:</div>
+
+        <!-- 方法标签 -->
+        <table class="method-table">
+            <tr>
+                <td>Noisy</td>
+                <td>CTSNet</td>
+                <td>GaGNet</td>
+            </tr>
+            <tr>
+                <td>FasNet+TAC</td>
+                <td>MC-ConvTasNet</td>
+                <td>MIMO-UNet</td>
+            </tr>
+            <tr>
+                <td>MB-MVDR(oracle)</td>
+                <td>EaBNet(Pro.)</td>
+                <td>EaBNet+PostNet(Pro.)</td>
+            </tr>
+        </table>
+
+        <hr>
+
+        <!-- Utterance 1 -->
+        <div class="utterance-bar">
+            Utterance 1 (SNR=-5dB, target-doa=15°, inter-doa=30°)
+        </div>
+
+        <div class="demo-grid" id="grid-1">
+            <!-- 第一行 -->
+            <div class="demo-item">
+                <audio controls preload="none">
+                    <source src="audio/utt1_noisy.wav" type="audio/wav">
+                </audio>
+                < img src="specs/utt1_noisy.png" class="spec-img" onclick="openModal(this.src)" alt="Noisy">
+            </div>
+            <div class="demo-item">
+                <audio controls preload="none">
+                    <source src="audio/utt1_ctsnet.wav" type="audio/wav">
+                </audio>
+                < img src="specs/utt1_ctsnet.png" class="spec-img" onclick="openModal(this.src)" alt="CTSNet">
+            </div>
+            <div class="demo-item">
+                <audio controls preload="none">
+                    <source src="audio/utt1_gagnet.wav" type="audio/wav">
+                </audio>
+                < img src="specs/utt1_gagnet.png" class="spec-img" onclick="openModal(this.src)" alt="GaGNet">
+            </div>
+
+            <!-- 第二行 -->
+            <div class="demo-item">
+                <audio controls preload="none">
+                    <source src="audio/utt1_fasnet.wav" type="audio/wav">
+                </audio>
+                < img src="specs/utt1_fasnet.png" class="spec-img" onclick="openModal(this.src)" alt="FasNet+TAC">
+            </div>
+            <div class="demo-item">
+                <audio controls preload="none">
+                    <source src="audio/utt1_mcconvtasnet.wav" type="audio/wav">
+                </audio>
+                < img src="specs/utt1_mcconvtasnet.png" class="spec-img" onclick="openModal(this.src)" alt="MC-ConvTasNet">
+            </div>
+            <div class="demo-item">
+                <audio controls preload="none">
+                    <source src="audio/utt1_mimounet.wav" type="audio/wav">
+                </audio>
+                < img src="specs/utt1_mimounet.png" class="spec-img" onclick="openModal(this.src)" alt="MIMO-UNet">
+            </div>
+
+            <!-- 第三行 -->
+            <div class="demo-item">
+                <audio controls preload="none">
+                    <source src="audio/utt1_mbmvdr.wav" type="audio/wav">
+                </audio>
+                < img src="specs/utt1_mbmvdr.png" class="spec-img" onclick="openModal(this.src)" alt="MB-MVDR">
+            </div>
+            <div class="demo-item">
+                <audio controls preload="none">
+                    <source src="audio/utt1_eabnet.wav" type="audio/wav">
+                </audio>
+                < img src="specs/utt1_eabnet.png" class="spec-img" onclick="openModal(this.src)" alt="EaBNet">
+            </div>
+            <div class="demo-item">
+                <audio controls preload="none">
+                    <source src="audio/utt1_eabnet_post.wav" type="audio/wav">
+                </audio>
+                < img src="specs/utt1_eabnet_post.png" class="spec-img" onclick="openModal(this.src)" alt="EaBNet+PostNet">
+            </div>
+        </div>
+
+        <!-- 更多 Utterance 可复制上面的结构 -->
+        <div class="utterance-bar" style="margin-top: 20px;">
+            Utterance 2 (SNR=0dB, target-doa=30°, inter-doa=60°)
+        </div>
+        <div class="demo-grid" id="grid-2">
+            <!-- 同样的9个方法，改文件名即可 -->
+            <div class="demo-item">
+                <audio controls preload="none">
+                    <source src="audio/utt2_noisy.wav" type="audio/wav">
+                </audio>
+                < img src="specs/utt2_noisy.png" class="spec-img" onclick="openModal(this.src)" alt="Noisy">
+            </div>
+            <!-- ... 其他8个 -->
+        </div>
+    </div>
+
+    <!-- 模态框 -->
+    <div class="modal" id="modal" onclick="closeModalOnBg(event)">
+        <span class="modal-close" onclick="closeModal()">&times;</span>
+        < img id="modal-img" src="" alt="Full spectrogram">
+    </div>
+
+    <script>
+        function openModal(src) {
+            document.getElementById('modal-img').src = src;
+            document.getElementById('modal').classList.add('active');
+        }
+        function closeModal() {
+            document.getElementById('modal').classList.remove('active');
+        }
+        function closeModalOnBg(e) {
+            if (e.target === e.currentTarget) closeModal();
+        }
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') closeModal();
+        });
+    </script>
+
+</body>
+</html>
