@@ -206,17 +206,23 @@
     <!-- 摘要 -->
     <div class="abstract">
         <span class="abstract-label">Abstract:</span> 
-        Standing upon the intersection of traditional beamformers and deep neural networks, 
-        we propose a causal neural beamformer paradigm called Embedding and Beamforming, 
-        and two core modules are designed accordingly, namely EM and BM. For EM, instead of 
-        estimating spatial covariance matrix explicitly, a 3-D embedding tensor is learned 
-        with the network, where both spatial-spectral-temporal discriminative information 
-        can be represented. For BM, a network is directly leveraged to derive the beamforming 
-        weights so as to implement filter-and-sum operation. To further improve the speech quality, 
-        a post-processing module is introduced to further suppress the residual noise. Based on 
-        the DNS Challenge dataset, we conduct the experiments for multichannel speech enhancement 
-        and the results show that the proposed system outperforms previous advanced baselines 
-        by a large margin in multiple evaluation metrics.
+        Multichannel speech enhancement, which utilizes spatial information from microphone
+        arrays to extract target speech from various noise, is essential for real-world applications
+        such as hearing aids, automatic speech recognition, and audio-video conferencing. 
+        Although deep learning-based approaches have demonstrated superior performance over
+        traditional beamformers,they are constrained by the discriminative capacity of 
+        spectral-spatial representations and high computational costs.In this paper, we 
+        present Embedding-and-Beamforming with Position-aware circular Convolution Network (EaB-ParCNet),
+         a spatially-enhanced network under an all-neural beamforming framework that improves 
+        Embedding-and-Beamforming (EaB) architecture through a position-aware circular convolution 
+        (ParC) Network. At the core of the proposed approach, the embedding module integrates a 
+        lightweight ParC block into a U-Net architecture to learn discriminative spectralspatial 
+        representations. The ParC block aims to effectively capture global spatial dependencies and
+        enhance the fusion of spectral and spatial information, whereas the U-Net architecture models 
+        multi-scale contextual information and preserves finegrained acoustic details. Experimental 
+        results on benchmark datasets demonstrate that the proposed ParC-Beamformer achieves competitive 
+        enhancement quality with a moderate increase in computational cost, offering a favorable trade-off
+        between performance and efficiency for offline speech enhancement scenarios.
     </div>
 
     <!-- 架构图 -->
